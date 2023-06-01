@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Купоны",
+  "name": "IISProjectCouponE",
+  "className": "CouponE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-project-coupon",
+      "modelProjection": "CouponE"
+    }
+  ]
+}

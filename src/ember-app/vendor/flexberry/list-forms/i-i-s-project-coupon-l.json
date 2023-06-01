@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-project-coupon-e",
+  "editForm": "i-i-s-project-coupon-e",
+  "external": false,
+  "caption": "Купоны",
+  "name": "IISProjectCouponL",
+  "className": "CouponL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-project-coupon",
+      "modelProjection": "CouponL"
+    }
+  ]
+}

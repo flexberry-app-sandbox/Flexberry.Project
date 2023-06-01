@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-project-order-e",
+  "editForm": "i-i-s-project-order-e",
+  "external": false,
+  "caption": "Заказы",
+  "name": "IISProjectOrderL",
+  "className": "OrderL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-project-order",
+      "modelProjection": "OrderL"
+    }
+  ]
+}

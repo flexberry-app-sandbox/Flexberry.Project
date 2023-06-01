@@ -1,0 +1,169 @@
+﻿{
+  "name": "IISProjectOrder",
+  "modelName": "i-i-s-project-order",
+  "className": "Order",
+  "nameSpace": "IIS.Project",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "status",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "client",
+      "relatedTo": "i-i-s-project-client",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "coupon",
+      "relatedTo": "i-i-s-project-coupon",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "orderProduct",
+      "relatedTo": "i-i-s-project-order-product",
+      "inverse": "order"
+    }
+  ],
+  "projections": [
+    {
+      "name": "OrderE",
+      "modelName": "i-i-s-project-order",
+      "attrs": [
+        {
+          "name": "status",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Password",
+          "lookupValueField": "password",
+          "relationName": "Client",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "password",
+              "caption": "Пароль",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Клиент",
+          "name": "client",
+          "relatedTo": "i-i-s-project-client",
+          "inverse": null
+        },
+        {
+          "lookupValue": "ProductName",
+          "lookupValueField": "productName",
+          "relationName": "Coupon",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "productName",
+              "caption": "Купон",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Купон",
+          "name": "coupon",
+          "relatedTo": "i-i-s-project-coupon",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "OrderProductE",
+          "caption": "Товарная позиция",
+          "name": "orderProduct",
+          "relatedTo": "i-i-s-project-order-product",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "OrderL",
+      "modelName": "i-i-s-project-order",
+      "attrs": [
+        {
+          "name": "status",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Client",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "password",
+              "caption": "Клиент",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Клиент",
+          "name": "client",
+          "relatedTo": "i-i-s-project-client",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Coupon",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "productName",
+              "caption": "Купон",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Купон",
+          "name": "coupon",
+          "relatedTo": "i-i-s-project-coupon",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

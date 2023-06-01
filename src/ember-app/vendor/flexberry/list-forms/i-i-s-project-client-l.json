@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-project-client-e",
+  "editForm": "i-i-s-project-client-e",
+  "external": false,
+  "caption": "Клиенты",
+  "name": "IISProjectClientL",
+  "className": "ClientL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-project-client",
+      "modelProjection": "ClientL"
+    }
+  ]
+}
